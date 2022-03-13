@@ -40,7 +40,11 @@ worlds.events.tick.subscribe(data => {
 
     let item = rightChestContainer.getItem(player.selectedSlot)
 
+    if(ilegalBlocks.includes(item.id)){
+
     player.runCommand(`tag @s add banned`)
+
+    }
 
   }
 
@@ -53,6 +57,8 @@ world.events.tick.subscribe(data => {
   world.getDimension("overworld").runCommand(`tellraw @a[tag=banned] {"rawtext":[{"text":"§4BU SERVERDEN BANLANDIN AGLA EZİK"}]}`)
 
   world.getDimension("overworld").runCommand(`title @a[tag=banned] title §4§lSERVERDEN BANLANDIN`)
+
+  
 
 })
 
