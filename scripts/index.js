@@ -30,7 +30,7 @@ world.events.blockPlace.subscribe(ev => {
 
 })
 
-worlds.events.tick.subscribe(data => {
+world.events.tick.subscribe(data => {
 
   for(const player of world.getPlayers()){
 
